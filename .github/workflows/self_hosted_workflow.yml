@@ -1,0 +1,22 @@
+name: Self hosted workflow
+on:
+ push: 
+  branches: ["main","master"]
+
+ workflow_dispatch:
+
+jobs:
+  demoselfhosted:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: echo Hello,welcome to demo self hosted workflow
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to demojobs,
+          echo test, and deploy your project.
+          echo welcome to multiline demojobs comments
