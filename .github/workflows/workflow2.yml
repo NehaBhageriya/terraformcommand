@@ -20,3 +20,18 @@ jobs:
           echo Add other actions to demojobs,
           echo test, and deploy your project.
           echo welcome to multiline demojobs comments
+        
+  secretkeyjob:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: echo ${{ secrets.MESSAGE }}
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to demojobs,
+          echo test, and deploy your project.
+          echo welcome to multiline demojobs comments
